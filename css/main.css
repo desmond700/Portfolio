@@ -32,6 +32,7 @@ div > div.progress{
 
 div.icon-bar {
   position: fixed;
+  z-index: 99999;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -46,7 +47,6 @@ div.icon-bar a {
   color: white;
   font-size: 20px;
   line-height: 35px;
-  z-index: 99999;
 }
 
 div.icon-bar a:hover {
