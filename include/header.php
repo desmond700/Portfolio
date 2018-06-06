@@ -68,10 +68,10 @@
 
   <div class="container-fluid px-0">
 
-        <nav class="shadow-lg navbar fixed-top navbar-expand-lg navbar-dark py-1">
+        <nav class="shadow-lg navbar fixed-top navbar-expand-lg navbar-light bg-light py-1">
           <div class="container">
-            <div class="border" style="background: #f4f4f4">
-              <a class="text-white card-link" href="#">
+            <div>
+              <a class="text-white card-link" href="/Portfolio/">
                 <img src="/Portfolio/images/logo.png" alt="" class="img-rounded center-block">
               </a>
             </div>
@@ -84,14 +84,11 @@
                 <li class="nav-item <?php echo $homelinkactive ?>">
                   <a class="nav-link smooth-scroll" href="/Portfolio/">Home <i class="fa fa-home" aria-hidden="true"></i> <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item <?php echo $bookslinkactive ?>">
-                  <a class="nav-link smooth-scroll" href="#About">About <i class="fa fa-book"></i></a>
-                </li>
                 <li class="nav-item <?php echo $aboutlinkactive ?>">
-                  <a class="nav-link smooth-scroll" href="/Portfolio/skills">Skills <i class="fa fa-info-circle"></i></a>
+                  <a class="nav-link smooth-scroll" href="/Portfolio/skills">Skills <i class="fa fa-tasks"></i></a>
                 </li>
                 <li class="nav-item <?php echo $contactlinkactive ?>">
-                  <a class="nav-link smooth-scroll" href="/Portfolio//projects/">Projects <i class="fa fa-phone-square" aria-hidden="true"></i></a>
+                  <a class="nav-link smooth-scroll" href="/Portfolio//projects/">Projects <i class="fa fa-th" aria-hidden="true"></i></a>
                 </li>
               </ul>
             </div>
