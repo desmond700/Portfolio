@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="github-activity-0.1.5.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
   <script src="github-activity-0.1.5.min.js"></script>
-  <script src="/Portfoliojs/main.js"></script>
+  <script src="/Portfolio/js/main.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 
@@ -88,7 +88,7 @@
                   <a class="nav-link smooth-scroll" href="/Portfolio/skills">Skills <i class="fa fa-tasks"></i></a>
                 </li>
                 <li class="nav-item <?php echo $contactlinkactive ?>">
-                  <a class="nav-link smooth-scroll" href="/Portfolio//projects/">Projects <i class="fa fa-th" aria-hidden="true"></i></a>
+                  <a class="nav-link smooth-scroll" href="/Portfolio/projects/">Projects <i class="fa fa-th" aria-hidden="true"></i></a>
                 </li>
               </ul>
             </div>
