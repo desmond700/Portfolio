@@ -7,6 +7,17 @@ window.onload = function(){
   	limit: 20 // optional
   });*/
 
+  fetch("../Data/info.json").then(response => {
+    response.json().then(json => {
+      listprojects(json);
+      if(getUrlParameter("title") !== "")
+        projectinfo(json);
+    })
+  })
+
+
+  //alert(urlParams.get("title"))
+
   $('#exampleModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
     var recipient = button.data('whatever') // Extract info from data-* attributes
@@ -39,16 +50,42 @@ window.onload = function(){
     })
   })
 
-  $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
+  function listprojects(json){
+    $.each(json.info, (index, element)  => {
+      if(element.Title === "CarApp"){
+        var card_text = $('<p class="card-text"></p>').text(element.Summary);
+        var card_title = $('<h4 class="card-title"></h4>').text(element.Title);
+        var hr = $("<hr>");
+        var card_body = $('<div class="card-body"></div>').append(card_title,hr,card_text);
+        var img = $("<img class='img-fluid' src='../images/Thumbnails/"+element.Thumbnail+"' />");
+        var card = $('<div class="card"></div>').append(img,card_body);
+        var parentdiv = $('<a class="col-6 col-md-3 py-2 px-2 card-link text-dark itemAnchor" href="view?title='+element.Title+'"></a>').append(card);
+
+        $("#projects").append(parentdiv);
       }
-    }
-  });
+    })
+  }
+
+  function projectinfo(json){
+    $.each(json.info, (index, element)  => {
+      if(element.Title === "CarApp"){
+        var card_text = $('<p class="card-text"></p>').text(element.Description);
+        var card_title = $('<h4 class="card-title"></h4>').text(element.Title);
+        var hr = $("<hr>");
+        var card_body = $('<div class="card-body"></div>').append(card_title,hr,card_text);
+        var img = $("<img class='img-fluid' src='../images/Thumbnails/"+element.Thumbnail+"' />");
+        var card = $('<div class="card"></div>').append(img,card_body);
+        var parentdiv = $('<a class="col-6 col-md-3 py-3 card-link text-dark" href="view?title='+element.Title+'"><div class="col-6 col-md-3 py-3"></div></a>').append(card);
+
+        $("#projects").append(parentdiv);
+      }
+    })
+  }
+
+  function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  };
 }
