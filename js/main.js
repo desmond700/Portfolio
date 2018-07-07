@@ -11,7 +11,7 @@ window.onload = function(){
     response.json().then(json => {
       listprojects(json);
       if(getUrlParameter("title") !== "")
-        projectinfo(json);
+        projectinfo(json,getUrlParameter("title"));
     })
   })
 
@@ -52,33 +52,42 @@ window.onload = function(){
 
   function listprojects(json){
     $.each(json.info, (index, element)  => {
-      if(element.Title === "CarApp"){
         var card_text = $('<p class="card-text"></p>').text(element.Summary);
         var card_title = $('<h4 class="card-title"></h4>').text(element.Title);
         var hr = $("<hr>");
         var card_body = $('<div class="card-body"></div>').append(card_title,hr,card_text);
-        var img = $("<img class='img-fluid' src='../images/Thumbnails/"+element.Thumbnail+"' />");
+        var img = $("<img class='' src='../images/Thumbnails/"+element.Thumbnail+"' height='200' />");
         var card = $('<div class="card"></div>').append(img,card_body);
-        var parentdiv = $('<a class="col-6 col-md-3 py-2 px-2 card-link text-dark itemAnchor" href="view?title='+element.Title+'"></a>').append(card);
+        var childDiv = $('<a class="d-block card-link text-dark" href="view?title='+element.Title+'"></a>').append(card);
+        var parentdiv = $('<div class="col-6 col-md-3 py-1 px-1 mx-0 itemAnchor"></div>').append(childDiv);
 
         $("#projects").append(parentdiv);
-      }
     })
   }
 
-  function projectinfo(json){
+  function projectinfo(json, titleVar){
     $.each(json.info, (index, element)  => {
-      if(element.Title === "CarApp"){
-        var card_text = $('<p class="card-text"></p>').text(element.Description);
-        var card_title = $('<h4 class="card-title"></h4>').text(element.Title);
-        var hr = $("<hr>");
-        var card_body = $('<div class="card-body"></div>').append(card_title,hr,card_text);
-        var img = $("<img class='img-fluid' src='../images/Thumbnails/"+element.Thumbnail+"' />");
-        var card = $('<div class="card"></div>').append(img,card_body);
-        var parentdiv = $('<a class="col-6 col-md-3 py-3 card-link text-dark" href="view?title='+element.Title+'"><div class="col-6 col-md-3 py-3"></div></a>').append(card);
+      if(titleVar === element.Title){
+        $(".name").html(element.Title);
+        $('<h2 class="card-title px-0">Project - <b>'+element.Title+'</b></h2>').appendTo(".title");
+        var desc = $('<p class="card-text"><b>Description:</b><br> '+element.Description+'</p>');
+        var date = $("<p><b>Date:</b> "+element.Date+"</p>")
+        var language = $("<div class='d-flex'><p><b>Language/s:&nbsp;</b></p><div class='language'></div></div>");
+        var p = $("<p class='col-12 my-4 py-3 d-flex justify-content-between border-bottom'><b>Screenshots</b> <a href='"+element.Github+"' target='_blank'>View on Github<i class='fa fa-github'></i></a></p>");
+        $("#info").append(date,language,desc);
+        $("div#screenshots").prepend(p);
+        element.Languages.forEach(element => {
+          $(".language").append(element+"<br>");
+        })
+        element.Screenshots.forEach(element  => {
+          var img = $("<img class='img-fluid' src='../images/Screenshots/"+element+"' width='200' />");
+          var div = $("<div class='col-6 col-md-3'></div>").append(img);
 
-        $("#projects").append(parentdiv);
+          $("div#screenshots").append(div);
+        })
       }
+
+      //$("#projects").append(parentdiv);
     })
   }
 
