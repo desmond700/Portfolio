@@ -78,7 +78,7 @@
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" style="height:100%" id="navbarSupportedContent">
               <hr>
               <ul class="navbar-nav">
                 <li class="nav-item <?php echo $homelinkactive ?>">
