@@ -9,9 +9,9 @@
   height: 100vh;
 }
 
-/*nav{
-  background-color: #778899;
-}*/
+li.nav-item:hover{
+  background-color: #f4f4f4;
+}
 
 .about{
   background-color: #E6E6FA;
@@ -25,13 +25,18 @@
   background-color: #20B2AA;
 }
 
-a.itemAnchor{
-  box-shadow: 20px 20px 50px grey;
-  border-radius: 2%
+div.itemAnchor{
+  border-radius: 2%;
+  transition: all .2s ease-in-out;
 }
 
-a.itemAnchor:hover{
+div.itemAnchor:hover{
   border: 1px solid #5F9EA0;
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari */
+  transform: scale(1.1); /* Standard syntax */
+  z-index: 9999;
+  background-color: #fff;
 }
 
 div > div.progress{
