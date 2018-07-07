@@ -2,7 +2,7 @@
 	"info": [{
 			"Title": "MovieStore",
 			"Date": "2018/03/08",
-      "Summary": "",
+      "Summary": "A Movie Website made with PHP using the MVC method for code organization",
 			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Screenshots": [
 				"login.PNG",
@@ -12,41 +12,34 @@
 				"manage_findcar.PNG",
 				"manage_listcar.PNG"
 			],
-			"Github": "https://github.com/desmond700/cSharpe_carApp.git"
+			"Languages":[
+				"HTML & CSS",
+				"JavaScript",
+				"PHP"
+			],
+			"Thumbnail":"MovieStoreHome.PNG",
+			"Github": "https://github.com/desmond700/MovieStore"
 		},
 		{
 			"Title": "BookStore",
 			"Date": "2018/03/08",
-      "Summary": "",
+      "Summary": "A book store website which incorporates technologies such as service workers, web workers and indexeddb",
 			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Screenshots": [
-				"login.PNG",
-				"manage_addcar.PNG",
-				"manage_cardetails.PNG",
-				"manage_editcar.PNG",
-				"manage_findcar.PNG",
-				"manage_listcar.PNG"
+				"BookStore/BookStoreHome.PNG",
+				"BookStore/BookStoreBooks.PNG",
+				"BookStore/BookStoreBook.PNG",
+				"BookStore/BookStoreShoppingCart.PNG"
 			],
-      "Thumbnail": "",
-			"Github": "https://github.com/desmond700/cSharpe_carApp.git"
+			"Languages":[
+				"HTML & CSS",
+				"JavaScript"
+			],
+      "Thumbnail": "BookStoreHome.PNG",
+			"Github": "https://github.com/desmond700/BookStore"
 		},
 		{
 			"Title": "RecipeBook",
-			"Date": "2018/03/08",
-      "Summary": "",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
-			"Screenshots": [
-				"login.PNG",
-				"manage_addcar.PNG",
-				"manage_cardetails.PNG",
-				"manage_editcar.PNG",
-				"manage_findcar.PNG",
-				"manage_listcar.PNG"
-			],
-			"Github": "https://github.com/desmond700/cSharpe_carApp.git"
-		},
-		{
-			"Title": "CarApp",
 			"Date": "2018/03/08",
       "Summary": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
@@ -58,8 +51,50 @@
 				"manage_findcar.PNG",
 				"manage_listcar.PNG"
 			],
+			"Languages":[
+				"HTML & CSS",
+				"JavaScript"
+			],
+			"Thumbnail":"Recipe-Book-Home.png",
+			"Github": "https://github.com/desmond700/cSharpe_carApp"
+		},
+		{
+			"Title": "BlackJack Game",
+			"Date": "2018/03/08",
+      "Summary": "Blackjack game created with javafx",
+			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Screenshots": [
+				"BlackJackGame/BlackJackGameBet.PNG",
+				"BlackJackGame/BlackJackGameBetValid.PNG",
+				"BlackJackGame/BlackJackGamePlay.PNG",
+				"BlackJackGame/BlackJackGamePlayerWon.PNG",
+				"BlackJackGame/BlackJackGamePlayHit.PNG",
+				"BlackJackGame/BlackJackGamePlayHitSec.PNG"
+			],
+			"Languages":[
+				"Java"
+			],
+      "Thumbnail": "BlackJackGamePlayHit.PNG",
+			"Github": "https://github.com/desmond700/BlackJackGamefx"
+		},
+		{
+			"Title": "CarApp",
+			"Date": "2018/03/08",
+      "Summary": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Screenshots": [
+				"CarApp/login.PNG",
+				"CarApp/manage_addcar.PNG",
+				"CarApp/manage_cardetails.PNG",
+				"CarApp/manage_editcar.PNG",
+				"CarApp/manage_findcar.PNG",
+				"CarApp/manage_listcar.PNG"
+			],
+			"Languages":[
+				"C#"
+			],
       "Thumbnail": "manage_listcar.PNG",
-			"Github": "https://github.com/desmond700/cSharpe_carApp.git"
+			"Github": "https://github.com/desmond700/cSharpe_carApp"
 		}
 
 	]
