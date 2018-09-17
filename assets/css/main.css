@@ -1,0 +1,196 @@
+/*css document*/
+
+.body{
+  background-color: ;
+}
+
+li.nav-item:hover{
+  background-color: #f4f4f4;
+}
+
+
+div.itemAnchor{
+  border-radius: 2%;
+  /*transition: all .2s ease-in-out;*/
+}
+
+div.itemAnchor:hover{
+  /*border: 1px solid #5F9EA0;
+  -ms-transform: scale(1.1); /* IE 9 */
+  /*-webkit-transform: scale(1.1); /* Safari */
+  /*transform: scale(1.1); /* Standard syntax */
+  /*z-index: 9999;
+  background-color: #fff;*/
+  cursor: pointer;
+}
+
+aside.sidenav {
+	position: fixed;
+	padding: 20px 30px;
+	font-family: sans-serif;
+	z-index: 9999;
+	height: 100%;
+    width: 270px; /* 0 width - change this with JavaScript */
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+li > span {
+	width: 250px;
+	display: inline-block;
+}
+
+li > button {
+	margin-left: 35px;
+}
+
+li > a {
+	cursor: pointer;
+}
+
+ul#pills{
+	margin-top: 20px;
+	padding: 0;
+	width: 100%;
+}
+
+ul#pills li{
+	list-style-type: none
+}
+
+ul#pills li:hover:not(.activelink){
+	background-color: #3b4249;
+}
+
+/*ul#pills li a{
+	text-align: center
+}*/
+
+.activelink{
+	background-color: #1d2124;
+}
+
+p.admin{
+	position: absolute;
+	padding-left: 5px;
+	bottom: 0;
+}
+
+p.admin > a.adminlink{
+	color: #6c757d;
+}
+
+a.adminlink{
+	cursor: pointer;
+}
+
+a#projectViewBackBtn{
+	color: #527bff;
+	cursor: pointer;
+}
+
+div.user-info{
+	display: flex;
+	flex-direction: column;
+}
+
+div.user-info > img{
+	margin: 10px auto;
+	height: 130px;
+}
+
+div.user-info > p#name{
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	margin: auto;
+	color: #fff;
+}
+
+.content{
+	display: flex;
+	flex-direction: row;
+	/*justify-content: space-between;*/
+}
+
+section#page{
+	width: calc(100% - 270px);
+	margin-left: auto;
+	padding-left: 10px;
+}
+
+/* Admin */
+
+
+nav#dashnav > ul{
+	margin-top: 20px;
+	padding: 0;
+	width: 100%;
+}
+
+nav#dashnav > ul li{
+	list-style-type: none;
+}
+
+nav#dashnav > ul li:hover:not(.activelink){
+	background-color: #3b4249;
+}
+
+/*nav#dashnav > ul li a{
+	text-align: center
+}*/
+
+
+@media only screen and (max-width: 690px) {
+    .content{
+		flex-direction: column;
+	}
+	
+	section#page{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+	
+	aside.sidenav {
+		position: static;
+		min-height: 0;
+		width: 100%; /* 0 width - change this with JavaScript */
+	}
+	
+	div.user-info{
+		padding: 30px 0
+	}
+	
+	div.user-info{
+		flex-direction: column;
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	div.user-info img{
+		margin: 10px auto;
+		height: 182px
+	}
+	
+	div.user-info p{
+		margin: 0 auto;
+		padding-left: 5px;
+	}
+	
+	ul#pills{
+		margin: 0 auto;
+		width: auto;
+	}
+
+	ul#pills li{
+		float: left;
+	}
+	
+	div.user-info > p#name{
+		font-size: 28px;
+	}
+	
+	
+}
