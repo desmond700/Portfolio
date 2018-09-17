@@ -1,6 +1,7 @@
-<?php include("include/header.php") ?>
-  <section class="d-flex landing-page">
-        <div class="my-auto mx-auto d-flex justify-content-center col-md-12">
+<?php include($_SERVER["DOCUMENT_ROOT"]."Portfolio/views/include/header.php") ?>
+
+  <div class="content">
+        <!--<div class="my-auto mx-auto d-flex justify-content-center col-md-12">
           <div class="mx-auto">
             <h2>Front end and Backend Web Developer</h2>
             <p>Coding is my passion.</p>
@@ -8,43 +9,49 @@
               <img class="rounded-circle" width="200" height="200" src="https://images.pexels.com/photos/462680/pexels-photo-462680.jpeg?cs=srgb&dl=beard-blur-casual-462680.jpg&fm=jpg" alt="">
             </div>
           </div>
-        </div>
+        </div>-->
+		
+		
+		<aside class="sidenav bg-dark">
+			<div class="user-info">
+				<img class="rounded-circle" src="assets/images/15027583_1430471596982184_305908304077287745_n.jpg" />
+				<p id="name">Desmond Wallace</p>
+				<p class="text-secondary">Web Developer, Mobile App Developer</p>
+			</div>
+			<nav id="projectnav" class="navbar px-0 py-0" style="display: none">
+				<ul id="pills" class="">
+				  <li id="about-pill">
+					<a class="text-white nav-link smooth-scroll">About Me<span class="sr-only">(current)</span></a>
+				  </li>
+				  <li id="skills-pill">
+					<a class="text-white nav-link smooth-scroll">Skills</a>
+				  </li>
+				  <li id="projects-pill">
+					<a class="text-white nav-link smooth-scroll">Projects</a>
+				  </li>
+				  <li id="contact-pill">
+					<a class="text-white nav-link smooth-scroll">Contact</a>
+				  </li>
+				</ul>
+			</nav>
+			<nav id="dashnav" class="navbar px-0 py-0" style="display: none">	
+				<ul>
+				  <li id="add">
+					<a class="text-white nav-link smooth-scroll">Add Project</a>
+				  </li>
+				  <li id="list">
+					<a class="text-white nav-link smooth-scroll">List Project</a>
+				  </li>
+				  <li id="logout">
+					<a class="text-white nav-link smooth-scroll">Logout</a>
+				  </li>
+				</ul>
+			</nav>
+			<p class="admin"><a class="adminlink">For administrative use only</a></p>
+			
+		</aside>
 
-    </section>
-    <section class="about pb-5" id="About">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 py-4">
-            <h2 class="text-center">About Me</h2>
-            <hr>
-          </div>
-          <div class="col-md-4">
-            <h2>About Me</h2>
-            <address class="">
-              <p>Name: Desmond Wallace</p>
-              <p>Age: 25 years old</p>
-              <p>City: Brampton, ON</p>
-              <p>Phone#: 647-864-8714</p>
-              <p>Email: <a href="mailto:dwdeveloper4@gmail.com">dwdeveloper4@gmail.com</a></p>
-            </address>
-          </div>
-          <div class="col-md-4">
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis quod quasi mollitia neque, officia commodi nobis cumque. Veritatis, ut, sint!</p>
-          </div>
-          <div class="col-md-4">
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ex, nulla atque dolorem recusandae placeat molestias perspiciatis quaerat magni sapiente.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
+        <section id="page"></section>
+    </div>
 
-    <section>
-      <div class="container">
-        <div id="feed"></div>
-      </div>
-    </section>
-
-<?php include("include/footer.php") ?>
+<?php include($_SERVER["DOCUMENT_ROOT"]."Portfolio/views/include/footer.php") ?>
