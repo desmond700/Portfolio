@@ -96,6 +96,111 @@
 			],
 			"Thumbnail":"MovieStoreHome.PNG",
 			"Github": "https://github.com/desmond700/MovieStore"
+		},
+		{
+			"Title": "SoundBoot",
+			"Date": "2018/06/07",
+			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
+			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Screenshots": [
+				"MovieStore/login.PNG",
+				"MovieStore/manage_addcar.PNG",
+				"MovieStore/manage_cardetails.PNG",
+				"MovieStore/manage_editcar.PNG",
+				"MovieStore/manage_findcar.PNG",
+				"MovieStore/manage_listcar.PNG"
+			],
+			"Languages":[
+				"HTML & CSS",
+				"JavaScript",
+				"PHP & MYSQL"
+			],
+			"Thumbnail":"MovieStoreHome.PNG",
+			"Github": "https://github.com/desmond700/MovieStore"
+		},
+		{
+			"Title": "TechWorld",
+			"Date": "2018/06/07",
+			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
+			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Screenshots": [
+				"MovieStore/login.PNG",
+				"MovieStore/manage_addcar.PNG",
+				"MovieStore/manage_cardetails.PNG",
+				"MovieStore/manage_editcar.PNG",
+				"MovieStore/manage_findcar.PNG",
+				"MovieStore/manage_listcar.PNG"
+			],
+			"Languages":[
+				"HTML & CSS",
+				"JavaScript",
+				"PHP & MYSQL"
+			],
+			"Thumbnail":"MovieStoreHome.PNG",
+			"Github": "https://github.com/desmond700/MovieStore"
+		},
+		{
+			"Title": "MPlayer",
+			"Date": "2018/06/07",
+			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
+			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Screenshots": [
+				"MovieStore/login.PNG",
+				"MovieStore/manage_addcar.PNG",
+				"MovieStore/manage_cardetails.PNG",
+				"MovieStore/manage_editcar.PNG",
+				"MovieStore/manage_findcar.PNG",
+				"MovieStore/manage_listcar.PNG"
+			],
+			"Languages":[
+				"HTML & CSS",
+				"JavaScript",
+				"PHP & MYSQL"
+			],
+			"Thumbnail":"MovieStoreHome.PNG",
+			"Github": "https://github.com/desmond700/MovieStore"
+		},
+		{
+			"Title": "MedCare",
+			"Date": "2018/06/07",
+			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
+			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Screenshots": [
+				"MovieStore/login.PNG",
+				"MovieStore/manage_addcar.PNG",
+				"MovieStore/manage_cardetails.PNG",
+				"MovieStore/manage_editcar.PNG",
+				"MovieStore/manage_findcar.PNG",
+				"MovieStore/manage_listcar.PNG"
+			],
+			"Languages":[
+				"HTML & CSS",
+				"JavaScript",
+				"PHP & MYSQL"
+			],
+			"Thumbnail":"MovieStoreHome.PNG",
+			"Github": "https://github.com/desmond700/MovieStore"
+		},
+		{
+			"Title": "DjangoMusicPlayer",
+			"Date": "2018/06/07",
+			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
+			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Screenshots": [
+				"MovieStore/login.PNG",
+				"MovieStore/manage_addcar.PNG",
+				"MovieStore/manage_cardetails.PNG",
+				"MovieStore/manage_editcar.PNG",
+				"MovieStore/manage_findcar.PNG",
+				"MovieStore/manage_listcar.PNG"
+			],
+			"Languages":[
+				"HTML & CSS",
+				"JavaScript",
+				"PHP & MYSQL"
+			],
+			"Thumbnail":"MovieStoreHome.PNG",
+			"Github": "https://github.com/desmond700/MovieStore"
 		}
 	]
 }
