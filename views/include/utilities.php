@@ -1,6 +1,7 @@
 <?php
-	
+
 	class Project{
+		public $id = 0;
 		public $Title = "";
 		public $Date = "";
 		public $Summary = "";
@@ -10,7 +11,7 @@
 		public $Thumbnail = "";
 		public $Github = "";
 	}
-	
+
 	function reArrayFiles(&$file_post) {
 
     $file_ary = array();
@@ -26,5 +27,5 @@
     return $file_ary;
 }
 
-	
+
 ?>

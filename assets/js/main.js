@@ -6,19 +6,19 @@ window.onload = function(){
   	selector: "#feed",
   	limit: 20 // optional
   });*/
-  
-	
+
+
 	// Initialize Firebase
   var config = {
-	apiKey: "AIzaSyAvfb6OZzyjENqucLPsGO0hDetbukDe68w",
-	authDomain: "my-portfolio-1eb18.firebaseapp.com",
-	databaseURL: "https://my-portfolio-1eb18.firebaseio.com",
-	projectId: "my-portfolio-1eb18",
-	storageBucket: "my-portfolio-1eb18.appspot.com",
-	messagingSenderId: "59972690158"
+  	apiKey: "AIzaSyAvfb6OZzyjENqucLPsGO0hDetbukDe68w",
+  	authDomain: "my-portfolio-1eb18.firebaseapp.com",
+  	databaseURL: "https://my-portfolio-1eb18.firebaseio.com",
+  	projectId: "my-portfolio-1eb18",
+  	storageBucket: "my-portfolio-1eb18.appspot.com",
+  	messagingSenderId: "59972690158"
   };
   firebase.initializeApp(config);
-  
+
   firebase.auth().onAuthStateChanged(function(user) {
 		// [START_EXCLUDE silent]
 		//document.getElementById('quickstart-verify-email').disabled = true;
@@ -32,7 +32,7 @@ window.onload = function(){
 		  return
 		}
 	})
-	
+
 	var ApplicationRouter = Backbone.Router.extend({
 
 		//map url routes to contained methods
@@ -66,7 +66,7 @@ window.onload = function(){
 		skills: function() {
 			//this.showPage('div#skills-page');
 			switchSideNav();
-			
+
 			this.selectPill('li#skills-pill');
 			$('#page').load( "views/home/skills.php" );
 		},
@@ -74,47 +74,47 @@ window.onload = function(){
 		about: function() {
 			//this.showPage('div#about-page');
 			switchSideNav();
-			
+
 			this.selectPill('li#about-pill');
 			$('#page').load( "views/home/about.php" );
 		},
-		
+
 		contact: function() {
 			//this.showPage('div#about-page');
 			switchSideNav();
-			
+
 			this.selectPill('li#contact-pill');
 			$('#page').load( "views/home/contact.php" );
 		},
-		
+
 		login: function() {
 			//this.showPage('div#about-page');
 			switchSideNav();
-			
+
 			if (firebase.auth().currentUser) {
 				// [START signout]
 				firebase.auth().signOut();
 				// [END signout]
 			}
-			
+
 			this.selectPill('a.adminlink');
 			$('#page').load( "views/admin/login/" );
 		},
-		
+
 		dashboard: function() {
 			//this.showPage('div#about-page');
 			this.selectPill('a.adminlink');
 			$('#page').load( "views/admin/dashboard/" );
-			
+
 			switchSideNav();
 		},
 
 		projects: function() {
 			//this.showPage('div#projects-page');
 			switchSideNav();
-			
+
 			$('#page').load( "views/projects/", () => {
-				
+
 				fetch("model/data/info.json", {cache: "default"}).then(response => {
 					response.json().then(json => {
 					  listprojects(json);
@@ -122,20 +122,20 @@ window.onload = function(){
 					})
 				})
 			});
-			
+
 			this.selectPill('li#projects-pill');
-						
+
 		},
-		
+
 		view: function(data) {
 			//this.showPage('div#projects-page');
 			switchSideNav();
-			  
+
 			this.selectPill('li#projects-pill');
-			
-			
+
+
 			$('#page').load( "views/projects/view", () => {
-				
+
 				fetch("model/data/info.json", {cache: "default"}).then(response => {
 					response.json().then(json => {
 						projectinfo(json, data);
@@ -145,61 +145,89 @@ window.onload = function(){
 			});
 			console.log("view: " + jsonObj);
 		},
-		
+
 		add: function() {
 			//this.showPage('div#about-page');
 			switchSideNav();
-			
+
 			this.selectPill('li#add');
 			$('#page').load( "views/admin/dashboard/add.php", () => {
-				
+
 			});
 		},
-		
+
 		addRedirect: function() {
 			//this.showPage('div#about-page');
 			window.location.href = "#admin/dashboard/add/";
 			this.add();
 		},
-		
+
 		list: function() {
 			//this.showPage('div#about-page');
 			switchSideNav();
-			
+
 			this.selectPill('li#list');
 			$('#page').load( "views/admin/dashboard/list.php", () => {
-				
+
 				fetch("model/data/info.json", {cache: "default"}).then(response => {
 					response.json().then(json => {
 					  listprojects_admin(json);
 					})
 				})
-				
+
 			});
 		},
-		
+
 		edit: function(event) {
 			//this.showPage('div#about-page');
 			switchSideNav();
-			
+
 			this.selectPill('li#list');
 			$('#page').load( "views/admin/dashboard/edit.php", () => {
 				$('#title').html(event);
 				fetch("model/data/info.json", {cache: "default"}).then(response => {
 					response.json().then(json => {
-						json.info.forEach( (element) => {
-							if(element.title == event){
-								
+            var id = $("input[name='id']");
+            var title = $("input[name='title']");
+            var date = $("input[name='date']");
+            var summary = $("input[name='summary']");
+            var description = $("textarea[name='description']");
+            var screenshots = $("#scrnsht");
+            var languages = $("#lang");
+            var thumbnail = $("input[name='thumbnail']");
+            var github = $("input[name='github']");
+
+						json.info.forEach(element => {
+							if(element.Title == event){
+                id.val(element.id);
+                title.val(element.Title);
+                date.val(element.Date);
+                summary.val(element.Summary);
+                description.val(element.Description);
+                thumbnail.parents().find('span.d-flex').find('img').attr('src', 'assets/images/Thumbnails/'+element.Thumbnail);
+                github.val(element.Github);
+                element.Screenshots.forEach( (value, index) => {
+                  if(index == 0){
+                    screenshots.children(':first-child').find('span.d-flex').find("span.image_preview").find('img').attr('src', 'assets/images/screenshots/'+value);
+                  }else{
+                    $('<p><span class="d-flex"><input type="file" class="file form-control mr-2" id="p_scnt" name="imgToUpload[]" value="" /><span class="image_preview" class="my-auto"><img src="assets/images/Screenshots/'+value+'" style="width: 50px; height: auto"  /></span></span></p>').appendTo(screenshots);
+                  }
+                });
+                element.Languages.forEach( (value, index) => {
+                  if(index == 0){
+                    languages.children(':first-child').find('span.d-flex').find("input").val(value);
+                  }else{
+                    $('<p class="d-flex"><input type="text" class="form-control" id="p_scnt" name="languages[]" value="'+value+'" placeholder="Input language" /></p>').appendTo(languages);
+                  }
+                });
 							}
 						})
 					})
 				})
-				
 			});
 		}
-
 	});
-	
+
 
 
 	var ApplicationView = Backbone.View.extend({
@@ -223,6 +251,7 @@ window.onload = function(){
 			'click a.addScnt': 'addInput',
 			'click a.remScnt': 'removeInput',
 			'click form #submit': 'getFormData',
+      'click form #edit': 'editProject',
 			'change form input.file, input.thumbnail': 'inputfilechange',
 			'keyup form input': 'inputchange',
 			'click nav#dashnav ul li#list a': 'displayList',
@@ -234,7 +263,7 @@ window.onload = function(){
 		initialize: function(){
 			//set dependency on ApplicationRouter
 			this.router = new ApplicationRouter();
-						
+
 			//call to begin monitoring uri and route changes
 			Backbone.history.start();
 		},
@@ -248,7 +277,7 @@ window.onload = function(){
 			//update url and pass true to execute route method
 			this.router.navigate("about", true);
 		},
-		
+
 		displayContact: function(){
 			//update url and pass true to execute route method
 			this.router.navigate("contact", true);
@@ -258,38 +287,38 @@ window.onload = function(){
 			//update url and pass true to execute route method
 			this.router.navigate("projects", true);
 		},
-		
+
 		displayProjectView: function(event){
 			//update url and pass true to execute route method
 			//alert(this.collection);
 			var title = event.currentTarget.dataset.title;
 			this.router.navigate("projects/view/"+title, true);
 		},
-		
+
 		displayAdminLogin: function(){
 			//update url and pass true to execute route method
 			this.router.navigate("admin/login", true);
 		},
-		
+
 		displayAddProject: function(){
 			//update url and pass true to execute route method
-						
+
 			this.router.navigate("admin/dashboard/add", true);
 		},
-		
+
 		displayUpdateProject: function(){
 			//update url and pass true to execute route method
 			this.router.navigate("admin/dashboard/update-project", true);
 		},
-		
+
 		addInput: function(e){
 			//update url and pass true to execute route method
 			var scrnshtDiv = $('#scrnsht');
 			var langDiv = $('#lang');
 			var i = $('#scrnsht p').length + 1;
-			var j = $('#lang p').length + 1;	
+			var j = $('#lang p').length + 1;
 			var result = $(e.currentTarget).attr('id');;
-			
+
 			if(result === 'screenshot'){
 				$('<p><span class="d-flex"><input type="file" class="file form-control" id="p_scnt" name="imgToUpload[]" value="" /> <a id="screenshot" class="remScnt mx-2 d-flex"><i class="fa fa-times-circle text-danger my-auto" style="font-size:32px"></i></a><span class="image_preview" class="my-auto"><img src="assets/images/no-image.png" style="width: 50px; height: auto"  /></span></span></p>').appendTo(scrnshtDiv);
 				i++;
@@ -297,50 +326,50 @@ window.onload = function(){
 				$('<p class="d-flex"><input type="text" class="form-control" id="p_scnt" name="languages[]" value="" placeholder="Input language" /> <a id="language" class="remScnt ml-1 d-flex"><i class="fa fa-times-circle text-danger my-auto" style="font-size:32px"></i></a></p>').appendTo(langDiv);
 				j++;
 			}
-				
+
 			return false;
 		},
-		
+
 		removeInput: function(e){
 			//update url and pass true to execute route method
 			var scrnshtDiv = $('#scrnsht');
 			var langDiv = $('#lang');
 			var i = $('#scrnsht p').length + 1;
-			var j = $('#lang p').length + 1;	
+			var j = $('#lang p').length + 1;
 			var result = $(e.currentTarget).attr('id');;
 			var response = confirm("Are you sure you want to remove this item?");
-			
+
 			if(response){
 				if(result === 'screenshot'){
-				
+
 					if( i > 2 ) {
 						$(e.currentTarget).parents('p').remove();
 						i--;
 					}
-				
+
 				}else if(result === 'language'){
-					
+
 					if( j > 2 ) {
 						$(e.currentTarget).parents('p').remove();
 						j--;
 					}
-				}	
+				}
 			}
-			
-			
+
+
 			return false;
-			
+
 		},
-		
+
 		inputfilechange: function(e){
-			
+
 			$("#message").empty(); // To remove the previous error message
 			var targetClass = $(e.currentTarget).attr('class');
 			var className = targetClass.substring(0,targetClass.indexOf(" "));
 			var targetEle = $(e.currentTarget).parents('span').children(':last-child');
 			var file = e.target.files[0];
 			var imagefile = file.type;
-			var match= ["image/jpeg","image/png","image/jpg"];
+			var match = ["image/jpeg","image/png","image/jpg"];
 			if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]))){
 				targetEle.find('img').attr('src','images/Screenshots/noimage.png');
 				$("#message").html("<p id='error'>Please Select A valid Image File</p>"+"<h4>Note</h4>"+"<span id='error_message'>Only jpeg, jpg and png Images type allowed</span>");
@@ -351,9 +380,9 @@ window.onload = function(){
 				reader.readAsDataURL(e.target.files[0]);
 				$(e.currentTarget).removeClass( "border border-danger" );
 			}
-			
+
 			function imageIsLoaded(e) {
-				
+
 				$("form ."+className).css("color","green");
 				targetEle.css("display", "block");
 				targetEle.find('img').attr('src', e.target.result);
@@ -362,11 +391,11 @@ window.onload = function(){
 			};
 
 		},
-		
+
 		inputchange: function(e){
-			
+
 			var targetEle = $(e.currentTarget);
-			
+
 			if(targetEle.val()){
 				targetEle.removeClass( "border border-danger" );
 			}else{
@@ -374,65 +403,90 @@ window.onload = function(){
 			}
 
 		},
-		
+
+    editProject: function(e){
+
+      var yesOrNo = confirm("Are you sure you want to add this project");
+      e.preventDefault();
+
+      if(yesOrNo){
+
+        var formItem = document.forms.namedItem("fileinfo");
+
+        $('#loading').show();
+        $.ajax({
+          url: "views/admin/dashboard/edit.php", // Url to which the request is send
+          type: "POST",                   // Type of request to be send, called as method
+          data: new FormData(formItem),   // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+          contentType: false,             // The content type used when sending data to the server.
+          cache: false,             		// To unable request pages to be cached
+          processData:false,        		// To send DOMDocument or non processed data file it is set to false
+          success: function(data){  		// A function to be called if request succeeds
+            $('#loading').hide();
+            $("#message").html("Submitted successfully.");
+          }
+        });
+      }
+
+		},
+
 		getFormData: function(e){
 			//update url and pass true to execute route method
-			e.preventDefault();
-			
-			var formItem = document.forms.namedItem("fileinfo");
-			var isValid = true;
-						
-			$("#form").find("input").each(function(index){
-				
-				if($(this).val() == ""){
-					isValid = false;
-					$(this).addClass( "border border-danger" );
-				}else{
-					$(this).removeClass( "border border-danger" );
-				}
-					console.log($( this ).val());
-					
-			})
-			
-			$("#message").empty();
-			if(isValid){
-				$('#loading').show();
-				$.ajax({
-					url: "views/admin/dashboard/add.php", // Url to which the request is send
-					type: "POST",                   // Type of request to be send, called as method
-					data: new FormData(formItem),   // Data sent to server, a set of key/value pairs (i.e. form fields and values)
-					contentType: false,             // The content type used when sending data to the server.
-					cache: false,             		// To unable request pages to be cached
-					processData:false,        		// To send DOMDocument or non processed data file it is set to false
-					success: function(data){  		// A function to be called if request succeeds
-						$('#loading').hide();
-						$("#message").html("Submitted successfully.");
-					}
-				});
-			}
-			
-		},
-		
-		displayList: function(){
-			
-			
-			this.router.navigate("admin/dashboard/list", true);
+      var yesOrNo = confirm("Are you sure you want to add this project");
+      e.preventDefault();
 
+      if(yesOrNo){
+
+  			var formItem = document.forms.namedItem("fileinfo");
+  			var isValid = true;
+
+  			$("fieldset[form='addForm']").find("input").each(function(index){
+
+  				if($(this).val() == ""){
+  					isValid = false;
+  					$(this).addClass( "border border-danger" );
+  				}else{
+  					$(this).removeClass( "border border-danger" );
+  				}
+  					console.log($( this ).val());
+
+  			})
+
+  			$("#message").empty();
+  			if(isValid){
+  				$('#loading').show();
+  				$.ajax({
+  					url: "views/admin/dashboard/add.php", // Url to which the request is send
+  					type: "POST",                   // Type of request to be send, called as method
+  					data: new FormData(formItem),   // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+  					contentType: false,             // The content type used when sending data to the server.
+  					cache: false,             		// To unable request pages to be cached
+  					processData:false,        		// To send DOMDocument or non processed data file it is set to false
+  					success: function(data){  		// A function to be called if request succeeds
+  						$('#loading').hide();
+  						$("#message").html("Submitted successfully.");
+  					}
+  				});
+  			}
+			}
 		},
-		
+
+		displayList: function(){
+			this.router.navigate("admin/dashboard/list", true);
+		},
+
 		displayEdit: function(e){
-						
+
 			var title = e.currentTarget.dataset.title;
 			this.router.navigate("admin/dashboard/list/edit/"+title, true);
+		},
+
+		removeProject: function(e){
 
 		},
-		
-		removeProject: function(e){
-			
-		},
-		
+
 		login: function(e){
-	
+
 			$("#adminLoginLoading").show();
 			var email = document.getElementById('email').value;
 			var password = document.getElementById('password').value;
@@ -450,7 +504,7 @@ window.onload = function(){
 			   // user signed in
 			   $("#adminLoginLoading").hide();
 			   window.location.href = "#admin/dashboard";
-			   
+
 			}).catch(function(error) {
 			  // Handle Errors here.
 			  $("#adminLoginLoading").hide();
@@ -458,9 +512,9 @@ window.onload = function(){
 			  var errorMessage = error.message;
 			  // [START_EXCLUDE]
 			  if (errorCode === 'auth/wrong-password') {
-				alert('Wrong password.');
+				      alert('Wrong password.');
 			  } else {
-				alert(errorMessage);
+				      alert(errorMessage);
 			  }
 			  console.log(error);
 			  //document.getElementById('quickstart-sign-in').disabled = false;
@@ -469,15 +523,15 @@ window.onload = function(){
 			// [END authwithemail]
 
 		},
-		
+
 		logout: function(e){
-			
+
 			var response = confirm("Are you sure you want to logout?");
-			
+
 			if(response){
 				firebase.auth().signOut().then(function() {
 					// Sign-out successful.
-				  
+
 					window.location.href = "/Portfolio/";
 
 				}, function(error) {
@@ -486,17 +540,17 @@ window.onload = function(){
 
 				});
 			}
-			
-		}
-		
-	});
-	
-	//load application
-	new ApplicationView();  
 
-  
-		
-	
+		}
+
+	});
+
+	//load application
+	new ApplicationView();
+
+
+
+
 	function switchSideNav(){
 		var url = window.location.href;
 		if(url.includes("dashboard")){
@@ -508,14 +562,14 @@ window.onload = function(){
 				$('nav#projectnav').show();
 			});
 		}
-		
-		
+
+
 	}
 
   //alert(urlParams.get("title"))
-  
-	
-	
+
+
+
   /*$('#exampleModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
     var recipient = button.data('whatever') // Extract info from data-* attributes
@@ -547,9 +601,9 @@ window.onload = function(){
       })
     })
   })*/
-  
-  
-	
+
+
+
   function listprojects_admin(json){
     json.info.reverse().forEach( (element) => {
 		var date = $('<p class="card-text"><small class="text-muted">'+element.Date+'</small></p>');
@@ -569,8 +623,8 @@ window.onload = function(){
         $('div#projects').append(parentdiv);
     })
   }
-	
-	
+
+
 
   function listprojects(json){
     json.info.reverse().forEach( (element) => {
@@ -602,7 +656,7 @@ window.onload = function(){
         element.Languages.forEach(element => {
           $(".language").append(element+"<br>");
         })
-        element.Screenshots.forEach(element  => {
+        element.Screenshots.forEach(element => {
           var img = $("<img class='img-fluid' src='assets/images/Screenshots/"+element+"' width='200' />");
           var div = $("<div class='col-6 col-md-3'></div>").append(img);
 

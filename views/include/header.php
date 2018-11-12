@@ -11,10 +11,9 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
   <!--<link rel="stylesheet" href="github-activity-0.1.5.min.css">-->
-  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <!--<script src="github-activity-0.1.5.min.js"></script>-->
-  
+
   <!-- Latest compiled and minified CSS -->
 
   <!-- jQuery library -->
@@ -27,7 +26,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
 </head>
-<body class="body">
+<body>
   <!--<div class="icon-bar">
     <a href="https://github.com/desmond700" class="github" target="_blank"><i class="fa fa-github"></i> <span>github</span></a>
     <a href="#" class="facebook" target="_blank"><i class="fa fa-facebook"></i> <span>facebook</span></a>

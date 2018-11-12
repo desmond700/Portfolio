@@ -1,8 +1,9 @@
 {
 	"info": [
 		{
+			"id": "1",
 			"Title": "CarApp",
-			"Date": "2018/03/09",
+			"Date": "2018-03-09",
 			"Summary": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Screenshots": [
@@ -20,8 +21,9 @@
 			"Github": "https://github.com/desmond700/cSharpe_carApp"
 		},
 		{
+			"id": "2",
 			"Title": "BlackJack Game",
-			"Date": "2018/02/09",
+			"Date": "2018-02-09",
 			"Summary": "Blackjack game created with javafx",
 			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Screenshots": [
@@ -39,17 +41,18 @@
 			"Github": "https://github.com/desmond700/BlackJackGamefx"
 		},
 		{
+			"id": "3",
 			"Title": "RecipeBook",
-			"Date": "2018/03/30",
+			"Date": "2018-03-30",
 			"Summary": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Screenshots": [
-				"login.PNG",
-				"manage_addcar.PNG",
-				"manage_cardetails.PNG",
-				"manage_editcar.PNG",
-				"manage_findcar.PNG",
-				"manage_listcar.PNG"
+				"RecipeBook/login.PNG",
+				"RecipeBook/manage_addcar.PNG",
+				"RecipeBook/manage_cardetails.PNG",
+				"RecipeBook/manage_editcar.PNG",
+				"RecipeBook/manage_findcar.PNG",
+				"RecipeBook/manage_listcar.PNG"
 			],
 			"Languages":[
 				"HTML & CSS",
@@ -59,8 +62,9 @@
 			"Github": "https://github.com/desmond700/cSharpe_carApp"
 		},
 		{
+			"id": "4",
 			"Title": "BookStore",
-			"Date": "2018/05/11",
+			"Date": "2018-05-11",
 			"Summary": "A book store website which incorporates technologies such as service workers, web workers and indexeddb",
 			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Screenshots": [
@@ -77,8 +81,9 @@
 			"Github": "https://github.com/desmond700/BookStore"
 		},
 		{
+			"id": "5",
 			"Title": "MovieStore",
-			"Date": "2018/06/07",
+			"Date": "2018-06-07",
 			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
 			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Screenshots": [
