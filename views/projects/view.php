@@ -1,4 +1,4 @@
-<?php include($_SERVER["DOCUMENT_ROOT"]."Portfolio/views/include/header.php") ?>
+<?php include($_SERVER["DOCUMENT_ROOT"]."/Portfolio/views/include/header.php") ?>
 <div class="container-fluid">
   <div class="breadcrumb bg-white pl-0">
     <a id="projectViewBackBtn">Back to projects</a>
@@ -13,11 +13,9 @@
     </div>
     <div class="col-md-12">
       <div class="containerifluid">
-        <div class="row" id="screenshots">
-
-        </div>
+        <div class="row" id="screenshots"></div>
       </div>
     </div>
   </div>
 </div>
-<?php include($_SERVER["DOCUMENT_ROOT"]."Portfolio/views/include/footer.php") ?>
+<?php include($_SERVER["DOCUMENT_ROOT"]."/Portfolio/views/include/footer.php") ?>

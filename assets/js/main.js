@@ -143,7 +143,6 @@ window.onload = function(){
 				})
 
 			});
-			console.log("view: " + jsonObj);
 		},
 
 		add: function() {
@@ -650,7 +649,9 @@ window.onload = function(){
         var desc = $('<p class="card-text"><b>Description:</b><br> '+element.Description+'</p>');
         var date = $("<p><b>Date:</b> "+element.Date+"</p>")
         var language = $("<div class='d-flex'><p><b>Language/s:&nbsp;</b></p><div class='language'></div></div>");
-        var p = $("<p class='col-12 my-4 py-3 d-flex justify-content-between border-bottom'><b>Screenshots</b> <a href='"+element.Github+"' target='_blank'>View on Github<i class='fa fa-github ml-1'></i></a></p>");
+        var website = element.Website != null ? '<span class="pr-1"><a href="views/sites'+element.Website+'">view website</a></span>' : '';
+        var gitHub = element.Github != null ? "<a href='"+element.Github+"' class='ml-1' target='_blank'>View on Github<i class='fa fa-github ml-1'></i></a>" : "";
+        var p = $("<p class='col-12 my-4 py-3 d-flex justify-content-between border-bottom'><b>Screenshots</b> <span class='pj-links'>"+website+""+gitHub+"</span></p>");
         $("#info").append(date,language,desc);
         $("div#screenshots").prepend(p);
         element.Languages.forEach(element => {

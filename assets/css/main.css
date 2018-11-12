@@ -81,6 +81,10 @@ p.admin > a.adminlink{
 	color: #6c757d;
 }
 
+.pj-links:nth-last-child(2){
+  border-left: 1px solid #000;
+}
+
 a.adminlink{
 	cursor: pointer;
 }

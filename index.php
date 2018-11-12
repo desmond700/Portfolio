@@ -1,4 +1,4 @@
-<?php include($_SERVER["DOCUMENT_ROOT"]."Portfolio/views/include/header.php") ?>
+<?php include($_SERVER["DOCUMENT_ROOT"]."/Portfolio/views/include/header.php") ?>
 
   <div class="content">
         <!--<div class="my-auto mx-auto d-flex justify-content-center col-md-12">
@@ -10,8 +10,8 @@
             </div>
           </div>
         </div>-->
-		
-		
+
+
 		<aside class="sidenav bg-dark">
 			<div class="user-info">
 				<img class="rounded-circle" src="assets/images/15027583_1430471596982184_305908304077287745_n.jpg" />
@@ -34,7 +34,7 @@
 				  </li>
 				</ul>
 			</nav>
-			<nav id="dashnav" class="navbar px-0 py-0" style="display: none">	
+			<nav id="dashnav" class="navbar px-0 py-0" style="display: none">
 				<ul>
 				  <li id="add">
 					<a class="text-white nav-link smooth-scroll">Add Project</a>
@@ -48,10 +48,10 @@
 				</ul>
 			</nav>
 			<p class="admin"><a class="adminlink">For administrative use only</a></p>
-			
+
 		</aside>
 
         <section id="page"></section>
     </div>
 
-<?php include($_SERVER["DOCUMENT_ROOT"]."Portfolio/views/include/footer.php") ?>
+<?php include($_SERVER["DOCUMENT_ROOT"]."/Portfolio/views/include/footer.php") ?>
