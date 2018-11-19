@@ -143,17 +143,13 @@ window.onload = function(){
 				})
 
 			});
-			console.log("view: " + jsonObj);
 		},
 
 		add: function() {
 			//this.showPage('div#about-page');
 			switchSideNav();
-
 			this.selectPill('li#add');
-			$('#page').load( "views/admin/dashboard/add.php", () => {
-
-			});
+			$('#page').load( "views/admin/dashboard/add.php", () => {});
 		},
 
 		addRedirect: function() {
@@ -250,8 +246,8 @@ window.onload = function(){
 			'click nav#dashnav ul li#logout a': 'logout',
 			'click a.addScnt': 'addInput',
 			'click a.remScnt': 'removeInput',
-			'click form #submit': 'getFormData',
-      'click form #edit': 'editProject',
+			'click button#submit': 'getFormData',
+			'click form #edit': 'editProject',
 			'change form input.file, input.thumbnail': 'inputfilechange',
 			'keyup form input': 'inputchange',
 			'click nav#dashnav ul li#list a': 'displayList',
@@ -371,7 +367,7 @@ window.onload = function(){
 			var imagefile = file.type;
 			var match = ["image/jpeg","image/png","image/jpg"];
 			if(!((imagefile==match[0]) || (imagefile==match[1]) || (imagefile==match[2]))){
-				targetEle.find('img').attr('src','images/Screenshots/noimage.png');
+				targetEle.find('img').attr('src','assets/images/Screenshots/noimage.png');
 				$("#message").html("<p id='error'>Please Select A valid Image File</p>"+"<h4>Note</h4>"+"<span id='error_message'>Only jpeg, jpg and png Images type allowed</span>");
 				return false;
 			}else{
@@ -404,75 +400,75 @@ window.onload = function(){
 
 		},
 
-    editProject: function(e){
+		editProject: function(e){
 
-      var yesOrNo = confirm("Are you sure you want to add this project");
-      e.preventDefault();
+		  var yesOrNo = confirm("Are you sure you want to add this project");
+		  e.preventDefault();
 
-      if(yesOrNo){
+		  if(yesOrNo){
 
-        var formItem = document.forms.namedItem("fileinfo");
+			var formItem = document.forms.namedItem("fileinfo");
 
-        $('#loading').show();
-        $.ajax({
-          url: "views/admin/dashboard/edit.php", // Url to which the request is send
-          type: "POST",                   // Type of request to be send, called as method
-          data: new FormData(formItem),   // Data sent to server, a set of key/value pairs (i.e. form fields and values)
-          contentType: false,             // The content type used when sending data to the server.
-          cache: false,             		// To unable request pages to be cached
-          processData:false,        		// To send DOMDocument or non processed data file it is set to false
-          success: function(data){  		// A function to be called if request succeeds
-            $('#loading').hide();
-            $("#message").html("Submitted successfully.");
-          }
-        });
-      }
+			$('#loading').show();
+			$.ajax({
+			  url: "views/admin/dashboard/edit.php", // Url to which the request is send
+			  type: "POST",                   // Type of request to be send, called as method
+			  data: new FormData(formItem),   // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+			  contentType: false,             // The content type used when sending data to the server.
+			  cache: false,             		// To unable request pages to be cached
+			  processData:false,        		// To send DOMDocument or non processed data file it is set to false
+			  success: function(data){  		// A function to be called if request succeeds
+				$('#loading').hide();
+				$("#message").html("Submitted successfully.");
+			  }
+			});
+		  }
 
 		},
 
 		getFormData: function(e){
 			//update url and pass true to execute route method
-      var yesOrNo = confirm("Are you sure you want to add this project");
-      e.preventDefault();
+		  var yesOrNo = confirm("Are you sure you want to add this project");
+		  //e.preventDefault();
 
-      if(yesOrNo){
+		  if(yesOrNo){
 
-  			var formItem = document.forms.namedItem("fileinfo");
-  			var isValid = true;
+				var formItem = $("#fileinfo")[0];
+				var isValid = true;
+				console.log(formItem);
+				$("fieldset[form='addForm']").find("input").each(function(index){
 
-  			$("fieldset[form='addForm']").find("input").each(function(index){
+					if($(this).val() == ""){
+						isValid = false;
+						$(this).addClass( "border border-danger" );
+					}else{
+						$(this).removeClass( "border border-danger" );
+					}
+						console.log($( this ).val());
 
-  				if($(this).val() == ""){
-  					isValid = false;
-  					$(this).addClass( "border border-danger" );
-  				}else{
-  					$(this).removeClass( "border border-danger" );
-  				}
-  					console.log($( this ).val());
+				})
 
-  			})
-
-  			$("#message").empty();
-  			if(isValid){
-  				$('#loading').show();
-  				$.ajax({
-  					url: "views/admin/dashboard/add.php", // Url to which the request is send
-  					type: "POST",                   // Type of request to be send, called as method
-  					data: new FormData(formItem),   // Data sent to server, a set of key/value pairs (i.e. form fields and values)
-  					contentType: false,             // The content type used when sending data to the server.
-  					cache: false,             		// To unable request pages to be cached
-  					processData:false,        		// To send DOMDocument or non processed data file it is set to false
-  					success: function(data){  		// A function to be called if request succeeds
-  						$('#loading').hide();
-  						$("#message").html("Submitted successfully.");
-  					}
-  				});
-  			}
+				$("#message").empty();
+				if(isValid){
+					$('#loading').show();
+					$.ajax({
+						url: "views/admin/dashboard/add.php", // Url to which the request is send
+						type: "POST",                   // Type of request to be send, called as method
+						data: new FormData(formItem),   // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+						contentType: false,             // The content type used when sending data to the server.
+						cache: false,             		// To unable request pages to be cached
+						processData:false,        		// To send DOMDocument or non processed data file it is set to false
+						success: function(data){  		// A function to be called if request succeeds
+							$('#loading').hide();
+							$("#message").html("Submitted successfully.");
+						}
+					});
+				}
 			}
 		},
 
 		displayList: function(){
-			this.router.navigate("admin/dashboard/list", true);
+				this.router.navigate("admin/dashboard/list", true);
 		},
 
 		displayEdit: function(e){
@@ -531,8 +527,8 @@ window.onload = function(){
 			if(response){
 				firebase.auth().signOut().then(function() {
 					// Sign-out successful.
-
-					window.location.href = "/Portfolio/";
+					alert("test");
+					this.displayAbout();
 
 				}, function(error) {
 					// An error happened.
@@ -650,7 +646,9 @@ window.onload = function(){
         var desc = $('<p class="card-text"><b>Description:</b><br> '+element.Description+'</p>');
         var date = $("<p><b>Date:</b> "+element.Date+"</p>")
         var language = $("<div class='d-flex'><p><b>Language/s:&nbsp;</b></p><div class='language'></div></div>");
-        var p = $("<p class='col-12 my-4 py-3 d-flex justify-content-between border-bottom'><b>Screenshots</b> <a href='"+element.Github+"' target='_blank'>View on Github<i class='fa fa-github ml-1'></i></a></p>");
+        var website = element.Website != null ? '<span class="pr-1"><a href="views/sites'+element.Website+'">view website</a></span>' : '';
+        var gitHub = element.Github != null ? "<a href='"+element.Github+"' class='ml-1' target='_blank'>View on Github<i class='fa fa-github ml-1'></i></a>" : "";
+        var p = $("<p class='col-12 my-4 py-3 d-flex justify-content-between border-bottom'><b>Screenshots</b> <span class='pj-links'>"+website+""+gitHub+"</span></p>");
         $("#info").append(date,language,desc);
         $("div#screenshots").prepend(p);
         element.Languages.forEach(element => {
