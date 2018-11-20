@@ -3,14 +3,14 @@
 	$base_path = $_SERVER["DOCUMENT_ROOT"];
 
 	include($base_path . "Portfolio/views/include/utilities.php");
-	
+
 	echo "php work";
-	
-	echo $_POST['title']; 
-	echo $_POST['date']; 
+
+	echo $_POST['title'];
+	echo $_POST['date'];
 	echo $_POST['summary'];
 	echo $_POST['description'];
-	echo $_FILES['imgToUpload']; 
+	echo $_FILES['imgToUpload'];
 	echo $_REQUEST['languages'];
 	echo $_FILES['thumbnail'];
 	echo $_POST['github'];
@@ -19,18 +19,18 @@
 	if(isset($_POST['title']) && isset($_POST['date']) && isset($_POST['summary']) &&
 	   isset($_POST['description']) && isset($_FILES['imgToUpload']) && isset($_REQUEST['languages']) &&
 	   isset($_FILES['thumbnail']) && isset($_POST['github'])) {
-		
+
 		echo "form works";
-		
+
 		// Store project path in projectDir variable
 		$projectDir = $base_path . "Portfolio/assets/images/Screenshots/" . $_POST['title'];
 
 		// Creates new project directory if it doesn't exist
 		if (!file_exists($projectDir))mkdir($projectDir, 0700, true);
-		
+
 		// Instantiate Project object to store project information
 		$project = new Project();
-		
+
 		// Assign info to Object's data members
 		$project->Title       = $_POST['title'];
 		$project->Date        = $_POST['date'];
@@ -183,67 +183,69 @@
 		<hr>
 	</div>
   <div class="col-sm-12 col-md-12 mx-auto">
-    <fieldset form="addForm" class="border px-4 py-3" id="fileinfo" method="POST" enctype="multipart/form-data">
-		<legend style="width:auto"><h3 class="py-2 px-2" >Add Project</h3></legend>
-		<div class="form-group">
-            <label for="username">Title</label>
-            <input type="text" class="form-control" name="title" placeholder="Enter project name" />
-        </div>
-        <div class="form-group">
-            <label>Date</label>
-            <input type="date" class="form-control" name="date" />
-        </div>
-		<div class="form-group">
-            <label>Summary</label>
-            <input type="text" class="form-control" name="summary" placeholder="Enter project summary" />
-        </div>
-		<div class="form-group">
-            <label>Github</label>
-            <input type="text" name="github" class="form-control" placeholder="Enter project's github repo" />
-        </div>
-		<div id="lang" class="form-group">
-			<p>
-				<label>Languages</label>
-				<span class="d-flex">
-					<input type="text" class="lang form-control" name="languages[]" placeholder="Input language/s used in project" />
-					<a id="language" class="addScnt ml-1 d-flex">
-						<i class="fa fa-plus-circle my-auto" style="font-size:32px"></i>
-					</a>
-				</span>
-			</p>
-		</div>
-		<div class="form-group">
-            <label>Description</label>
-            <textarea class="form-control" name="description" rows="5"></textarea>
-        </div>
-		<div class="form-group">
-          <label>Thumbnail</label>
-			<span class="d-flex">
-				<input type="file" name="thumbnail" class="thumbnail form-control" />
-				<span class="image_preview ml-2" class="my-auto">
-					<img src="assets/images/no-image.png" style="width: 50px; height: auto"  />
-				</span>`
-			</span>
-		</div>
-		<div id="scrnsht" class="form-group">
-			<p>
-				<label>Screenshots</label>
-				<span class="d-flex">
-					<input type="file" class="file form-control my-auto" name="imgToUpload[]" />
-					<a id="screenshot" class="addScnt mx-2 d-flex">
-						<i class="fa fa-plus-circle my-auto" style="font-size:32px"></i>
-					</a>
-					<span class="image_preview" class="my-auto">
-						<img src="assets/images/no-image.png" style="width: 50px; height: auto"  />
+		<form name="addForm" class="border px-4 py-3" id="fileinfo" method="POST" enctype="multipart/form-data">
+			<fieldset class="scheduler-border">
+				<legend class="scheduler-border" style="width:auto"><h3 class="py-2 px-2" >Add Project</h3></legend>
+				<div class="form-group">
+					<label for="username">Title</label>
+					<input type="text" class="form-control" name="title" placeholder="Enter project name" />
+				</div>
+				<div class="form-group">
+					<label>Date</label>
+					<input type="date" class="form-control" name="date" />
+				</div>
+				<div class="form-group">
+					<label>Summary</label>
+					<input type="text" class="form-control" name="summary" placeholder="Enter project summary" />
+				</div>
+				<div class="form-group">
+					<label>Github</label>
+					<input type="text" name="github" class="form-control" placeholder="Enter project's github repo" />
+				</div>
+				<div id="lang" class="form-group">
+					<p>
+						<label>Languages</label>
+						<span class="d-flex">
+							<input type="text" class="lang form-control" name="languages[]" placeholder="Input language/s used in project" />
+							<a id="language" class="addScnt ml-1 d-flex">
+								<i class="fa fa-plus-circle my-auto" style="font-size:32px"></i>
+							</a>
+						</span>
+					</p>
+				</div>
+				<div class="form-group">
+					<label>Description</label>
+					<textarea class="form-control" name="description" rows="5"></textarea>
+				</div>
+				<div class="form-group">
+				  <label>Thumbnail</label>
+					<span class="d-flex">
+						<input type="file" name="thumbnail" class="thumbnail form-control" />
+						<span class="image_preview ml-2" class="my-auto">
+							<img src="assets/images/no-image.png" style="width: 50px; height: auto"  />
+						</span>`
 					</span>
-				</span>
-			</p>
-		</div>
-        <div class="form-group pt-3">
-            <button type="submit" id="submit" class="btn btn-primary">Add project</button>
-            <img id="loading" style="display: none;" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-        </div>
-    </form>
+				</div>
+				<div id="scrnsht" class="form-group">
+					<p>
+						<label>Screenshots</label>
+						<span class="d-flex">
+							<input type="file" class="file form-control my-auto" name="imgToUpload[]" />
+							<a id="screenshot" class="addScnt mx-2 d-flex">
+								<i class="fa fa-plus-circle my-auto" style="font-size:32px"></i>
+							</a>
+							<span class="image_preview" class="my-auto">
+								<img src="assets/images/no-image.png" style="width: 50px; height: auto"  />
+							</span>
+						</span>
+					</p>
+				</div>
+			<div class="form-group pt-3">
+				<button type="submit" id="submit" class="btn btn-primary">Add project</button>
+				<img id="loading" style="display: none;" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+			</div>
+			</fieldset>
+		</form>
 	<div id="message"></div>
   </div>
 </div>

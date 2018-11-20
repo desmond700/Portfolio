@@ -429,14 +429,14 @@ window.onload = function(){
 		getFormData: function(e){
 			//update url and pass true to execute route method
 		  var yesOrNo = confirm("Are you sure you want to add this project");
-		  //e.preventDefault();
+		  e.preventDefault();
 
 		  if(yesOrNo){
 
-				var formItem = $("#fileinfo")[0];
+				var form = $("#fileinfo").get(0);
 				var isValid = true;
-				console.log(formItem);
-				$("fieldset[form='addForm']").find("input").each(function(index){
+				
+				$("form[name='addForm']").find("input").each(function(index){
 
 					if($(this).val() == ""){
 						isValid = false;
@@ -454,7 +454,7 @@ window.onload = function(){
 					$.ajax({
 						url: "views/admin/dashboard/add.php", // Url to which the request is send
 						type: "POST",                   // Type of request to be send, called as method
-						data: new FormData(formItem),   // Data sent to server, a set of key/value pairs (i.e. form fields and values)
+						data: new FormData(form),   // Data sent to server, a set of key/value pairs (i.e. form fields and values)
 						contentType: false,             // The content type used when sending data to the server.
 						cache: false,             		// To unable request pages to be cached
 						processData:false,        		// To send DOMDocument or non processed data file it is set to false
