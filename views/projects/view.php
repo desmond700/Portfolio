@@ -17,5 +17,17 @@
       </div>
     </div>
   </div>
+  <div id="myModal" class="modal">
+    <span class="close cursor">close <span class="font-weight-bold">&times;</span></span>
+    <div id="modalBody" class="modal-content">
+      <a class="prev" data-plusSlides=-1>&#10094;</a>
+      <a class="next" data-plusSlides=1>&#10095;</a>
+      <!-- Caption text -->
+      <!--<div class="caption-container">
+        <p id="caption"></p>
+      </div>-->
+
+    </div>
+  </div>
 </div>
 <?php include($_SERVER["DOCUMENT_ROOT"]."/Portfolio/views/include/footer.php") ?>

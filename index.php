@@ -18,7 +18,7 @@
 				<p id="name">Desmond Wallace</p>
 				<p class="text-secondary">Web Developer, Mobile App Developer</p>
 			</div>
-			<nav id="projectnav" class="navbar px-0 py-0" style="display: none">
+			<nav id="projectnav" class="navbar px-0 py-0">
 				<ul id="pills" class="">
 				  <li id="about-pill">
 					<a class="text-white nav-link smooth-scroll">About Me<span class="sr-only">(current)</span></a>
@@ -34,21 +34,6 @@
 				  </li>
 				</ul>
 			</nav>
-			<nav id="dashnav" class="navbar px-0 py-0" style="display: none">
-				<ul>
-				  <li id="add">
-					<a class="text-white nav-link smooth-scroll">Add Project</a>
-				  </li>
-				  <li id="list">
-					<a class="text-white nav-link smooth-scroll">List Project</a>
-				  </li>
-				  <li id="logout">
-					<a class="text-white nav-link smooth-scroll">Logout</a>
-				  </li>
-				</ul>
-			</nav>
-			<p class="admin"><a class="adminlink">For administrative use only</a></p>
-
 		</aside>
 
         <section id="page"></section>
