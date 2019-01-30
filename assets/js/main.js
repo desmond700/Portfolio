@@ -129,7 +129,8 @@ window.onload = function(){
       'click span.close': 'closeModal',
       //'click #myModal': 'closeModal',
       'click a.next': 'plusSlides',
-      'click a.prev': 'plusSlides'
+      'click a.prev': 'plusSlides',
+			'click button#showPrototype': 'displayPrototype'
 		},
 
 		//called on instantiation
@@ -137,10 +138,11 @@ window.onload = function(){
 			//set dependency on ApplicationRouter
 			this.router = new ApplicationRouter();
       this.slideIndex = 1;
-
+			this.isShowProto = true;
 			//call to begin monitoring uri and route changes
 			Backbone.history.start();
       this.showSlides(this.slideIndex);
+			this.displayPrototype();
 		},
 
 		displaySkills: function(){
@@ -168,6 +170,20 @@ window.onload = function(){
 			//alert(this.collection);
 			let title = event.currentTarget.dataset.title;
 			this.router.navigate("projects/view/"+title, true);
+		},
+
+		displayPrototype: function(){
+			console.log(this.isShowProto);
+			if(this.isShowProto){
+				$("#showPrototype").html("Hide info");
+				$("#prototypeInfo").show("slow");
+				this.isShowProto = false;
+			}
+			else{
+				$("#showPrototype").html("Show info");
+				$("#prototypeInfo").hide("slow");
+				this.isShowProto = true;
+			}
 		},
 
     openModal: function(event) {
@@ -273,19 +289,37 @@ window.onload = function(){
     $.each(json.info, (index, element)  => {
       if(titleVar === element.Title){
         let scrnshtCount = 0;
+				let protoImgCount = 0;
         $(".name").html(element.Title);
         $('<h2 class="card-title px-0">Project - <b>'+element.Title+'</b></h2>').appendTo(".title");
         let desc = $('<p class="card-text"><b>Description:</b><br> '+element.Description+'</p>');
-        let date = $("<p><b>Date:</b> "+element.Date+"</p>")
-        let language = $("<div class='d-flex'><p><b>Language/s:&nbsp;</b></p><div class='language'></div></div>");
-        let website = element.Website != null ? '<span class="pr-1"><a href="views/sites'+element.Website+'">view website</a></span>' : '';
+        let date = $("<p><b>Date:</b> "+element.Date+"</p>");
+				let module_name = $("<p><b>Module:</b> "+element.Module+"</p>");
+				let module_length = $("<p><b>Module length:</b> "+element.Module_length+"</p>");
+				let prototype = $(`<p><b class="mr-2">Prototype:</b> <button id="showPrototype" class='btn bg-secondary text-white py-1 px-1'>Show info</button></p>
+					<div id="prototypeInfo" class="container-fluid border bg-light" style="display: none">
+							<p class="text-danger font-weight-bold">Prototype may differ to some extent from the final project.</p>
+							<p><b>PowerPoint:</b></p>
+							<p><b>Images(<span id="protoImgCnt"></span>)</b></p>
+							<div id="prototypeImg" class="row"></div>
+					</div>
+				`);
+
+				let language = $("<div class='d-flex'><p><b>Languages/Technologies:&nbsp;</b></p><div class='language'></div></div>");
+        let website = element.Website != null ? '<span class="pr-1"><a href="views/sites'+element.Website+'">View website</a></span>' : '';
         let gitHub = element.Github != null ? "<a href='"+element.Github+"' class='ml-1' target='_blank'>View on Github<i class='fa fa-github ml-1'></i></a>" : "";
         let p = $("<p class='col-12 my-4 py-3 d-flex justify-content-between border-bottom'><b>Screenshots(<span id='scrnshtCnt'></span>)</b> <span class='pj-links'>"+website+""+gitHub+"</span></p>");
-        $("#info").append(date,language,desc);
+        $("#info").append(date,module_name,module_length,prototype,language,desc);
         $("div#screenshots").prepend(p);
-        element.Languages.map(element => {
+        element.LanguagesAndTechnologies.map(element => {
           $(".language").append(element+"<br>");
         });
+				element.Prototype.Images.map(element => {
+					let prototypeimg = $("<img class='scrnsht img-fluid hover-shadow cursor' data-imagePosition='"+(index+1)+"' src='assets/images/Prototype/"+element+"' width='200' />");
+          let prototypediv = $("<div class='column col-6 col-md-3 mb-4'></div>").append(prototypeimg);
+          protoImgCount++;
+          $('div#prototypeImg').append(prototypediv);
+				});
         element.Screenshots.map((element, index) => {
           let scrnshtimg = $("<img class='scrnsht img-fluid hover-shadow cursor' data-imagePosition='"+(index+1)+"' src='assets/images/Screenshots/"+element+"' width='200' />");
           let scrnshtdiv = $("<div class='column col-6 col-md-3 mb-4'></div>").append(scrnshtimg);
@@ -301,6 +335,7 @@ window.onload = function(){
           console.log("index: "+index);
           $('.caption-container').after(scrnshtDivDot);*/
         });
+				$("p").find('#protoImgCnt').html(protoImgCount);
         $("p").find('#scrnshtCnt').html(scrnshtCount);
       }
 

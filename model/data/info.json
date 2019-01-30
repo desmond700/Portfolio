@@ -4,8 +4,11 @@
 			"id": "1",
 			"Title": "DreamHome",
 			"Date": "2018-03-09",
-			"Summary": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Module":"Web Development",
+			"Module_length":"4 Weeks",
+			"Prototype":null,
+			"Summary": "A simple website built with only html and css",
+			"Description": "This was the first web project of the Course. This project spanned a period of 4 Weeks, and it was somewhat challenging due to my limited skillset at that time. It demonstrated, to some extent, the skills I possessed at that time, and with hindsight, I see the evolution of my overall Web Development proficiency",
 			"Screenshots": [
 				"DreamHome/Dream_House_inc.PNG",
 				"DreamHome/Dream_House_inc_About.PNG",
@@ -14,8 +17,8 @@
 				"DreamHome/Dream_House_inc_Locations.PNG",
 				"DreamHome/Dream_House_inc_Properties.PNG"
 			],
-			"Languages":[
-				"C# - Windows Forms Application"
+			"LanguagesAndTechnologies":[
+				"HTML & CSS"
 			],
 			"Thumbnail": "Dream_House_inc .PNG",
 			"Github": null,
@@ -25,8 +28,11 @@
 			"id": "2",
 			"Title": "JSCarla&Greg",
 			"Date": "2018-03-09",
-			"Summary": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Module":"JavaScript",
+			"Module_length":"4 Weeks",
+			"Prototype":null,
+			"Summary": "This module's project was to be done from the accompanied textbook, rather than creating it by myself.",
+			"Description": "This module's project was to be done from the accompanied textbook, rather than creating it by myself. The exercises as well as the overall project was very fun and challenging. My problem solving skills saw a marked improvement subsequent to the completion of this module.",
 			"Screenshots": [
 				"JSCarla&Greg/Gregs_Gambits.PNG",
 				"JSCarla&Greg/Gregs_Gambits_About_You.PNG",
@@ -35,8 +41,8 @@
 				"JSCarla&Greg/Lees_Landscapes_About_You.PNG",
 				"JSCarla&Greg/Lees_Landscapes_Our_Services.PNG"
 			],
-			"Languages":[
-				"C# - Windows Forms Application"
+			"LanguagesAndTechnologies":[
+				"JavaScript"
 			],
 			"Thumbnail": "Gregs_Gambits.PNG",
 			"Github": null,
@@ -46,8 +52,11 @@
 			"id": "3",
 			"Title": "CarApp",
 			"Date": "2018-03-09",
+			"Module":"Introduction to C# and ASP.NET Programming",
+			"Module_length":"4 Weeks",
+			"Prototype":null,
 			"Summary": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Description": "In this module I was tasked with building a c# application, I was presented with some ideas, one of which was a Car Management application, of which I chose. The application featured various options such as to add a car, list cars, view a car and edit a car. XML was used to store application's data.",
 			"Screenshots": [
 				"CarApp/login.PNG",
 				"CarApp/manage_addcar.PNG",
@@ -56,7 +65,7 @@
 				"CarApp/manage_findcar.PNG",
 				"CarApp/manage_listcar.PNG"
 			],
-			"Languages":[
+			"LanguagesAndTechnologies":[
 				"C# - Windows Forms Application"
 			],
 			"Thumbnail": "manage_listcar.PNG",
@@ -67,8 +76,22 @@
 			"id": "4",
 			"Title": "BlackJack Game",
 			"Date": "2018-02-09",
+			"Module":"Java Programming",
+			"Module_length":"4 Weeks",
+			"Prototype":{
+				"PowerPoint":"BlackJackGame/powerpoint/BlackJack presentation.pptx",
+				"Images":[
+					"BlackJackGame/images/blackJackDiagram.PNG",
+					"BlackJackGame/images/blackJackGame.PNG",
+					"BlackJackGame/images/Card.PNG",
+					"BlackJackGame/images/Dealer.PNG",
+					"BlackJackGame/images/Deck.PNG",
+					"BlackJackGame/images/Hand.PNG",
+					"BlackJackGame/images/Player.PNG"
+				]
+			},
 			"Summary": "Blackjack game created with javafx",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Description": "In this module, I began by building the console version of the blackJack Game to in an effort to mitigate the amount the spent fixing bugs while working on the Graphical User Interface (GUI). This project was very challenging more so during building of the GUI, as JavaFx was completely new to me, so i observed another project to get an idea of how to structure UI, and with that i was able to ultimately able to construct something particularly pleased with. This project climaxed with a class event to showcast the game to other teachers and staff.",
 			"Screenshots": [
 				"BlackJackGame/BlackJackGameBet.PNG",
 				"BlackJackGame/BlackJackGameBetValid.PNG",
@@ -77,7 +100,7 @@
 				"BlackJackGame/BlackJackGamePlayHit.PNG",
 				"BlackJackGame/BlackJackGamePlayHitSec.PNG"
 			],
-			"Languages":[
+			"LanguagesAndTechnologies":[
 				"Java & JavaFx"
 			],
 			"Thumbnail": "BlackJackGamePlayHit.PNG",
@@ -88,8 +111,16 @@
 			"id": "5",
 			"Title": "RecipeBook",
 			"Date": "2018-03-30",
-			"Summary": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Module":"Advanced Web Technologies",
+			"Module_length":"4 Weeks",
+			"Prototype":{
+				"PowerPoint":"RecipeBook/powerpoint/",
+				"Images":[
+					"RecipeBook/images/"
+				]
+			},
+			"Summary": "A recipe Book website created in ASP.NET MVC.",
+			"Description": "",
 			"Screenshots": [
 				"RecipeBook/Home - Recipe-Book.PNG",
 				"RecipeBook/Recipes - Recipe-Book.PNG",
@@ -98,7 +129,7 @@
 				"RecipeBook/About - Recipe-Book.PNG",
 				"RecipeBook/Contact - Recipe-Book.PNG"
 			],
-			"Languages":[
+			"LanguagesAndTechnologies":[
 				"HTML & CSS",
 				"JavaScript & jQuery"
 			],
@@ -107,31 +138,62 @@
 			"Website": "/Recipe-Book"
 		},
 		{
-			"id": "6",
 			"Title": "BookStore",
 			"Date": "2018-05-11",
+			"Module":"jQuery & CMS Development",
+			"Module_length":"4 Weeks",
+			"Prototype":{
+				"PowerPoint":"BookStore/powerpoint/",
+				"Images":[
+					"BookStore/images/Home.png",
+					"BookStore/images/Books.png",
+					"BookStore/images/Shopping Cart.png",
+					"BookStore/images/About.png",
+					"BookStore/images/Contact.png",
+					"BookStore/images/Checkout.png"
+				]
+			},
 			"Summary": "A book store website which incorporates technologies such as service workers, web workers and indexeddb",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Description": "",
 			"Screenshots": [
 				"BookStore/BookStoreHome.PNG",
 				"BookStore/BookStoreBooks.PNG",
 				"BookStore/BookStoreBook.PNG",
 				"BookStore/BookStoreShoppingCart.PNG"
 			],
-			"Languages":[
+			"LanguagesAndTechnologies":[
 				"HTML & CSS",
-				"JavaScript & jQuery"
+				"JavaScript & jQuery",
+				"WebWorkers",
+				"IndexedDB"
 			],
 			"Thumbnail": "BookStoreHome.PNG",
 			"Github": "https://github.com/desmond700/BookStore",
 			"Website": "/BookStore"
 		},
 		{
-			"id": "7",
 			"Title": "MovieStore",
 			"Date": "2018-06-07",
-			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Module":"PHP Programming",
+			"Module_length":"4 Weeks",
+			"Prototype":{
+				"PowerPoint":"MovieStore/powerpoint/MovieStore Prototype.pptx",
+				"Images":[
+					"MovieStore/images/Slide2.PNG",
+					"MovieStore/images/Slide3.PNG",
+					"MovieStore/images/Slide4.PNG",
+					"MovieStore/images/Slide5.PNG",
+					"MovieStore/images/Slide6.PNG",
+					"MovieStore/images/Slide7.PNG",
+					"MovieStore/images/Slide8.PNG",
+					"MovieStore/images/Slide9.PNG",
+					"MovieStore/images/Slide10.PNG",
+					"MovieStore/images/Slide11.PNG",
+					"MovieStore/images/Slide12.PNG"
+				]
+			},
+			"Summary": "A Movie Store Web App with PHP & MYSQL on the backend.",
+			"Description": "",
 			"Screenshots": [
 				"MovieStore/Screenshot_2019-01-14 Add Movie - MovieStore inc .png",
 				"MovieStore/Screenshot_2019-01-14 Admin List Movies - MovieStore inc .png",
@@ -144,7 +206,7 @@
 				"MovieStore/Screenshot_2019-01-14 View Account - MovieStore inc .png",
 				"MovieStore/Screenshot_2019-01-14 View Cart - MovieStore inc .png"
 			],
-			"Languages":[
+			"LanguagesAndTechnologies":[
 				"HTML & CSS",
 				"JavaScript",
 				"PHP & MYSQL"
@@ -156,8 +218,22 @@
 		{
 			"Title": "SoundBoot",
 			"Date": "2018/06/07",
-			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Module":"Android development",
+			"Module_length":"4 Weeks",
+			"Prototype":{
+				"PowerPoint":"SoundBoot/powerpoint/ANDROID PROTOTYPE.pptx",
+				"Images":[
+					"SoundBoot/images/Slide3.PNG",
+					"SoundBoot/images/Slide4.PNG",
+					"SoundBoot/images/Slide5.PNG",
+					"SoundBoot/images/Slide6.PNG",
+					"SoundBoot/images/Slide7.PNG",
+					"SoundBoot/images/Slide8.PNG",
+					"SoundBoot/images/Slide9.PNG"
+				]
+			},
+			"Summary": "An Android music player app built with the Spotify REST API.",
+			"Description": "",
 			"Screenshots": [
 				"Soundboot/Screenshot_20180915-234442.png",
 				"Soundboot/Screenshot_20180915-235109.png",
@@ -172,10 +248,8 @@
 				"Soundboot/Screenshot_20180915-235333.png",
 				"Soundboot/Screenshot_20180915-235340.png"
 			],
-			"Languages":[
-				"HTML & CSS",
-				"JavaScript",
-				"PHP & MYSQL"
+			"LanguagesAndTechnologies":[
+				"Java"
 			],
 			"Thumbnail":"Screenshot_20180915-235109.png",
 			"Github": "https://github.com/desmond700/SoundBoot",
@@ -184,8 +258,25 @@
 		{
 			"Title": "TechWorld",
 			"Date": "2018/06/07",
-			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Module":"Mobile Web Development",
+			"Module_length":"4 Weeks",
+			"Prototype":{
+				"PowerPoint":"TechWorld/powerpoint/TechWorld Prototype.pptx",
+				"Images":[
+					"TechWorld/images/Folder Structure.png",
+					"TechWorld/images/Home.png",
+					"TechWorld/images/Login.png",
+					"TechWorld/images/Register.png",
+					"TechWorld/images/Product list.png",
+					"TechWorld/images/Product view.png",
+					"TechWorld/images/Shopping Cart.png",
+					"TechWorld/images/About.png",
+					"TechWorld/images/Contact.png",
+					"TechWorld/images/Admin.png"
+				]
+			},
+			"Summary": "An online tech store built using the MEAN Stack.",
+			"Description": "",
 			"Screenshots": [
 				"TechWorld/Screenshot_2019-01-14 Techworld.png",
 				"TechWorld/Screenshot_2019-01-14 Techworld2.png",
@@ -199,10 +290,11 @@
 				"TechWorld/Screenshot_2019-01-14 Techworld10.png",
 				"TechWorld/Screenshot_2019-01-14 Techworld11.png"
 			],
-			"Languages":[
-				"HTML & CSS",
-				"JavaScript",
-				"PHP & MYSQL"
+			"LanguagesAndTechnologies":[
+				"AngularJS",
+				"NodeJS",
+				"MongoDB",
+				"ExpressJS"
 			],
 			"Thumbnail":"Screenshot_2019-01-14 Techworld4.png",
 			"Github": "https://github.com/desmond700/techworld",
@@ -211,7 +303,20 @@
 		{
 			"Title": "MPlayer",
 			"Date": "2018/06/07",
-			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
+			"Module":"iPhone Development",
+			"Module_length":"4 Weeks",
+			"Prototype":{
+				"PowerPoint":"MPlayer/powerpoint",
+				"Images":[
+					"MPlayer/images/",
+					"MPlayer/images/",
+					"MPlayer/images/",
+					"MPlayer/images/",
+					"MPlayer/images/",
+					"MPlayer/images/"
+				]
+			},
+			"Summary": "An IOS Music Player Appp built using Swift",
 			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Screenshots": [
 				"MPlayer/Login_Screen.png",
@@ -219,10 +324,8 @@
 				"MPlayer/Player_screen.png",
 				"MPlayer/Storyboard_layout.png"
 			],
-			"Languages":[
-				"HTML & CSS",
-				"JavaScript",
-				"PHP & MYSQL"
+			"LanguagesAndTechnologies":[
+				"Swift"
 			],
 			"Thumbnail":"Player_screen.png",
 			"Github": null,
@@ -231,7 +334,19 @@
 		{
 			"Title": "MedCare",
 			"Date": "2018/06/07",
-			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
+			"Module":"Android Tablet Development",
+			"Module_length":"4 Weeks",
+			"Prototype":{
+				"PowerPoint":"MedCare/powerpoint",
+				"Images":[
+					"MedCare/images/Slide2.PNG",
+					"MedCare/images/Slide3.PNG",
+					"MedCare/images/Slide4.PNG",
+					"MedCare/images/Slide5.PNG",
+					"MedCare/images/Slide6.PNG"
+				]
+			},
+			"Summary": "An Android Medical App.",
 			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Screenshots": [
 				"MedCare/Screenshot_2018-10-08-21-19-03.png",
@@ -240,10 +355,8 @@
 				"MedCare/Screenshot_2018-10-08-21-20-16.png",
 				"MedCare/Screenshot_2018-10-08-21-20-48.png"
 			],
-			"Languages":[
-				"HTML & CSS",
-				"JavaScript",
-				"PHP & MYSQL"
+			"LanguagesAndTechnologies":[
+				"Java"
 			],
 			"Thumbnail":"Screenshot_2018-10-08-21-20-08.png",
 			"Github": "https://github.com/desmond700/MedCare",
@@ -252,7 +365,21 @@
 		{
 			"Title": "DjangoMusicPlayer",
 			"Date": "2018/06/07",
-			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
+			"Module":"Python Development",
+			"Module_length":"4 Weeks",
+			"Prototype":{
+				"PowerPoint":"DjangoMusicPlayer/powerpoint/DjangoMusicStore.pptx",
+				"Images":[
+					"DjangoMusicPlayer/images/Home.png",
+					"DjangoMusicPlayer/images/Store.png",
+					"DjangoMusicPlayer/images/Album - tracks.png",
+					"DjangoMusicPlayer/images/Player.png",
+					"DjangoMusicPlayer/images/Admin login.png",
+					"DjangoMusicPlayer/images/Admin register.png",
+					"DjangoMusicPlayer/images/Admin's dashboard.png"
+				]
+			},
+			"Summary": "A Django Music Player Web App",
 			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Screenshots": [
 				"DjangoMusicPlayer/Screenshot_2019-01-14 Add music Django site admin.png",
@@ -263,10 +390,9 @@
 				"DjangoMusicPlayer/Screenshot_2019-01-14 Site administration Django site admin.png",
 				"DjangoMusicPlayer/Screenshot_2019-01-14 Store - ---- .png"
 			],
-			"Languages":[
-				"HTML & CSS",
-				"JavaScript",
-				"PHP & MYSQL"
+			"LanguagesAndTechnologies":[
+				"Python",
+				"Django"
 			],
 			"Thumbnail":"Screenshot_2019-01-14 Home.png",
 			"Github": "https://github.com/desmond700/django_music_store",
@@ -275,8 +401,19 @@
 		{
 			"Title": "KeizrUniversity",
 			"Date": "2018/06/07",
-			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Module":"Advanced Java",
+			"Module_length":"4 Weeks",
+			"Prototype":{
+				"PowerPoint":"KeizrUniversity/powerpoint/UniversityPrototype.pptx",
+				"Images":[
+					"KeizrUniversity/images/Students.png",
+					"KeizrUniversity/images/Student view.png",
+					"KeizrUniversity/images/Dorms.png",
+					"KeizrUniversity/images/Dorms view.png"
+				]
+			},
+			"Summary": "A University Web App built with Java Servlet and Jsp.",
+			"Description": "",
 			"Screenshots": [
 				"KeizrUniversity/Screenshot_2019-01-14 Halls - St Peter Hall.png",
 				"KeizrUniversity/Screenshot_2019-01-14 Halls.png",
@@ -284,11 +421,9 @@
 				"KeizrUniversity/Screenshot_2019-01-14 Students - Kofi Asumadu.png",
 				"KeizrUniversity/Screenshot_2019-01-14 Students.png"
 			],
-			"Languages":[
-				"HTML & CSS",
-				"JavaScript",
-				"PHP & MYSQL"
-			],
+			"LanguagesAndTechnologies":[
+				"Java",
+				"Servlet & JSP"			],
 			"Thumbnail":"Screenshot_2019-01-14 Students.png",
 			"Github": "https://github.com/desmond700/keizruniversity_java_webapp",
 			"Website": null
@@ -296,6 +431,23 @@
 		{
 			"Title": "Blog",
 			"Date": "2018/06/07",
+			"Module":"C# Programming",
+			"Module_length":"4 Weeks",
+			"Prototype":{
+				"PowerPoint":"Blog/powerpoint/Blog website.pptx",
+				"Images":[
+					"Blog/images/Login.png",
+					"Blog/images/Signup.png",
+					"Blog/images/Home.png",
+					"Blog/images/Profile.png",
+					"Blog/images/Profile - Make a post.png",
+					"Blog/images/Profile - inbox.png",
+					"Blog/images/Admin - login.png",
+					"Blog/images/Admin - dashboard",
+					"Blog/images/Admin - Make a post.png",
+					"Blog/images/Amin - inbox.png"
+				]
+			},
 			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
 			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
 			"Screenshots": [
@@ -305,11 +457,9 @@
 				"Blog/Screenshot_2019-01-13 Blog_DotNetCore4.png",
 				"Blog/Screenshot_2019-01-13 Blog_DotNetCore5.png"
 			],
-			"Languages":[
-				"HTML & CSS",
-				"JavaScript",
-				"PHP & MYSQL"
-			],
+			"LanguagesAndTechnologies":[
+				"C#",
+				".NETCore"			],
 			"Thumbnail":"Screenshot_2019-01-13 Blog_DotNetCore2.png",
 			"Github": "https://github.com/desmond700/blog_reactjs_dotnetcore",
 			"Website": null

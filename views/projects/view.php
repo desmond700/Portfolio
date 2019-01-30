@@ -8,9 +8,7 @@
     <hr>
   </div>
   <div class="row">
-    <div class="col-md-12 py-2 my-2" id="info">
-
-    </div>
+    <div class="col-md-12 py-2 my-2" id="info"></div>
     <div class="col-md-12">
       <div class="containerifluid">
         <div class="row" id="screenshots"></div>
