@@ -154,7 +154,7 @@
 				]
 			},
 			"Summary": "A book store website which incorporates technologies such as service workers, web workers and indexeddb",
-			"Description": "",
+			"Description": "In this module, I was given the opportunity to use some new technologies, that wasn't used in any of my previous projects. I used service workers to allow the website to be used offline, similar to a native mobile application. Web workers to give asynchronous functionality to the Webpage and alleviate some of the work on the Main thread, and IndexedDB to store some user data in the browser.",
 			"Screenshots": [
 				"BookStore/BookStoreHome.PNG",
 				"BookStore/BookStoreBooks.PNG",
@@ -193,7 +193,7 @@
 				]
 			},
 			"Summary": "A Movie Store Web App with PHP & MYSQL on the backend.",
-			"Description": "",
+			"Description": "In this module, I was tasked with building a Website using PHP & MySQL, Given that I already had prior experience with both technologies, from my self-taught experience, more time was spent on implementing features and functionality rather than trying to learn the actual technologies.",
 			"Screenshots": [
 				"MovieStore/Screenshot_2019-01-14 Add Movie - MovieStore inc .png",
 				"MovieStore/Screenshot_2019-01-14 Admin List Movies - MovieStore inc .png",
@@ -233,7 +233,7 @@
 				]
 			},
 			"Summary": "An Android music player app built with the Spotify REST API.",
-			"Description": "",
+			"Description": "This module was long awaited, as i always wanted to learn android. The first week was spent creating the prototype and getting familiar with the Android studio IDE and also the Android SDK. For this project, I decided to make a music player application, but for this, I wanted to stream the music to the app - my first choice was to use the Soundcloud API, but at the time it was being worked on, so i went with the Spotify API instead. The API in my opinion was well documented, and I was able to get it up and running in less time than I thought",
 			"Screenshots": [
 				"Soundboot/Screenshot_20180915-234442.png",
 				"Soundboot/Screenshot_20180915-235109.png",
@@ -276,7 +276,7 @@
 				]
 			},
 			"Summary": "An online tech store built using the MEAN Stack.",
-			"Description": "",
+			"Description": "This module like the Android module was also long awaited, as I always wanted to learn the MEAN stack. It was very challenge to figure out how I would incorporate them all into one project, but eventually I succeeded with help from various sources like Stackoverfloow.com. The most difficult part of the project I would say is getting acquainted with AngularJS, as it's a very big framework, and difficult to master.",
 			"Screenshots": [
 				"TechWorld/Screenshot_2019-01-14 Techworld.png",
 				"TechWorld/Screenshot_2019-01-14 Techworld2.png",
@@ -317,7 +317,7 @@
 				]
 			},
 			"Summary": "An IOS Music Player Appp built using Swift",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Description": "",
 			"Screenshots": [
 				"MPlayer/Login_Screen.png",
 				"MPlayer/music_list_screen.png",
@@ -347,7 +347,7 @@
 				]
 			},
 			"Summary": "An Android Medical App.",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Description": "",
 			"Screenshots": [
 				"MedCare/Screenshot_2018-10-08-21-19-03.png",
 				"MedCare/Screenshot_2018-10-08-21-19-57.png",
@@ -380,7 +380,7 @@
 				]
 			},
 			"Summary": "A Django Music Player Web App",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Description": "",
 			"Screenshots": [
 				"DjangoMusicPlayer/Screenshot_2019-01-14 Add music Django site admin.png",
 				"DjangoMusicPlayer/Screenshot_2019-01-14 Home.png",
@@ -449,7 +449,7 @@
 				]
 			},
 			"Summary": "A Movie Website made with PHP using the MVC method for code organization",
-			"Description": "A car-manager app created using C# winform. The Project was done over a span 4 weeks",
+			"Description": "",
 			"Screenshots": [
 				"Blog/Screenshot_2019-01-13 Blog_DotNetCore.png",
 				"Blog/Screenshot_2019-01-13 Blog_DotNetCore2.png",

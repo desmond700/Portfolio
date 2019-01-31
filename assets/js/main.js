@@ -125,12 +125,12 @@ window.onload = function(){
 			'click ul#pills li#contact-pill a': 'displayContact',
 			'click a.pview': 'displayProjectView',
 			'click a#projectViewBackBtn': 'displayProjects',
-      'click img.scrnsht': 'openModal',
-      'click span.close': 'closeModal',
-      //'click #myModal': 'closeModal',
-      'click a.next': 'plusSlides',
-      'click a.prev': 'plusSlides',
-			'click button#showPrototype': 'displayPrototype'
+		    'click img.scrnsht': 'openModal',
+		    'click span.close': 'closeModal',
+		    //'click #myModal': 'closeModal',
+		    'click a.next': 'plusSlides',
+		    'click a.prev': 'plusSlides'
+			//'click button#showPrototype': 'displayPrototype'
 		},
 
 		//called on instantiation
